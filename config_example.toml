@@ -1,0 +1,29 @@
+verbose = true
+max_hypothesis_examples = 500
+max_retry = 3
+max_fix = 1
+max_strategy_retry = 3
+max_strategy_fix = 1
+max_workers = 10
+
+
+[llm_servers]
+
+[llm_servers.ollama]
+name = "ollama"
+api_key = "ollama"
+base_url = "http://localhost:11434/v1"
+concurrent = 2  # default is 1
+model = "qwen2:72b-ctx16k"  # FROM qwen2:72b-instruct-q8_0, PARAMETER num_ctx 16384
+allow_request_type = ["short_answer", "long_answer"]  # default is all
+enabled = true  # default is true
+retry = 10 # default is 4
+
+
+# [llm_servers.openai_4o_mini]
+# name = "openai_4o_mini"
+# api_key = "***"
+# base_url = "https://api.openai.com/v1"
+# concurrent = 3
+# model = "gpt-4o-mini"
+# allow_request_type = ["long_answer"]
