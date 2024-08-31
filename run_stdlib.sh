@@ -1,6 +1,5 @@
-export PYTHONPATH=/home/gary/llm_pbt
 round_from=0
-round_to=6
+round_to=8
 
 
 folder_path="result_working/stdlib/PBTFactory_stdlib_without_expert_knowledge"

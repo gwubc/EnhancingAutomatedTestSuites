@@ -183,10 +183,11 @@ class EvalResult(IResult):
 
 import ast
 
-import mccabe
+# import mccabe
 
 
 def get_mccabe_complexity(filename: str) -> int:
+    return -1
     code = mccabe._read(filename)
     tree = compile(code, filename, "exec", ast.PyCF_ONLY_AST)
     visitor = mccabe.PathGraphingAstVisitor()
