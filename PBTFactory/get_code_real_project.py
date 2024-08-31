@@ -1,5 +1,6 @@
 import json
 import os
+import astor
 
 from PBTFactory.code_under_test import code_under_test
 from PBTFactory.get_code_helper import get_class_structure
@@ -44,7 +45,7 @@ def get_code_real_project(path_to_data):
     cut.filepath = data["filepath"]
 
     if data["classname"] != "global":
-        class_structure = get_class_structure(full_code, data["classname"])
+        class_structure = astor.to_source(get_class_structure(full_code, data["classname"]))
         cut.class_structure = class_structure
     return cut
 

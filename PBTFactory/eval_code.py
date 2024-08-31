@@ -143,7 +143,7 @@ def run_code(file_path, project_path=None, log_path=None, timeout_msg=""):
         volumes=volumes,
         environment=[f"PYTHONPATH=/workdir/project"],
         working_dir="/workdir",
-        command="python /workdir/test_code.py",
+        command="bash /usr/src/scripts/run_python_code.sh",
         detach=True,
     )
     container = create_docker_container(docker_config)

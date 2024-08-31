@@ -4,3 +4,7 @@ evalplus
 requests
 toml
 openai
+
+matplotlib
+numpy
+matplotlib_venn

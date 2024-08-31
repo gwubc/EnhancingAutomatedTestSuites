@@ -3,11 +3,8 @@ pause.txt
 result*/
 config*
 !config_example.toml
-
-# WIP
-real_project_dataset
-collect_data*
-TODO
+create_dataset/dataset
+create_dataset/calles.csv
 
 # Copy from https://github.com/github/gitignore/blob/main/Python.gitignore
 # Byte-compiled / optimized / DLL files

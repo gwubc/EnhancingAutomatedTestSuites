@@ -20,7 +20,6 @@ if __name__ == "__main__":
     cut_datas = []
     for i in sorted(os.listdir(args.dataset))[:]:
         cut = get_code_real_project(os.path.join(args.dataset, i))
-        # cut.class_structure = ""
         _, testdir, resultdir, logdir = setup_for_real_project(cut, args.out)
         cut_datas.append(
             CUT_data(cut, args.project_src_code, testdir, resultdir, logdir)

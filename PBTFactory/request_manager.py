@@ -136,7 +136,7 @@ class RequestManager:
                 request["id"], chat_completion.choices[0].message.content, timeused
             )
         except Exception as e:
-            logging.error(f"Request failed: {e}, retrying {retry} times")
+            logging.warning(f"Request failed: {e}, retrying {retry} times")
             if retry > 0:
                 time.sleep(600)
                 return self.process_request(request, llm_server, model, retry - 1)
